@@ -93,7 +93,8 @@
             pagenumber <= 5 ? $Button.addClass('pgEmpty') : $Button.click(function() { buttonClickCallback(destPage); });
         }
         else {
-            pagenumber >= parseInt(pagecount/5)*5+1 ? $Button.addClass('pgEmpty') : $Button.click(function() { buttonClickCallback(destPage); });
+            //pagenumber >= parseInt(pagecount/5)*5+1 ? $Button.addClass('pgEmpty') : $Button.click(function() { buttonClickCallback(destPage); });
+            pagecount <= 5 ? $Button.addClass('pgEmpty') : pagenumber >= parseInt(pagecount/5)*5+1 ? $Button.addClass('pgEmpty') : $Button.click(function() { buttonClickCallback(destPage); });
         }
 
         return $Button;

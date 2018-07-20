@@ -13,12 +13,12 @@
     <script type="text/javascript" language="javascript">
 
         $(document).ready(function() {
-            $("#pager").pager({ pagenumber: 1, pagecount: 23, buttonClickCallback: PageClick });
+            $("#pager").pager({ pagenumber: 1, pagecount: 5, buttonClickCallback: PageClick });
         });
 
         PageClick = function(pageclickednumber) {
 		console.log("123");
-            $("#pager").pager({ pagenumber: pageclickednumber, pagecount: 23, buttonClickCallback: PageClick });
+            $("#pager").pager({ pagenumber: pageclickednumber, pagecount: 5, buttonClickCallback: PageClick });
             $("#result").html("Clicked Page " + pageclickednumber);
         }
        
